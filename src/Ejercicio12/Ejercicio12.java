@@ -43,8 +43,10 @@ public class Ejercicio12 extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
         jLabel1.setText("tienda de DVD");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 100, 30));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 240, 30));
 
         jLabel2.setText("numero de dias a alquilar");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 150, 20));
@@ -132,7 +134,7 @@ public class Ejercicio12 extends javax.swing.JFrame {
 
     private void cmdPagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdPagarActionPerformed
         String resul;
-        double cda,pelicula,ctp,resultotal;
+        long cda,pelicula,ctp,resultotal;
         
         
          if(txtAlquilar.getText().isEmpty()){
@@ -144,8 +146,8 @@ public class Ejercicio12 extends javax.swing.JFrame {
            txtCantidad.requestFocusInWindow();
        }
        else{
-       cda =Double.parseDouble(txtAlquilar.getText());
-       pelicula =Double.parseDouble(txtCantidad.getText());
+       cda =Long.parseLong(txtAlquilar.getText());
+       pelicula =Long.parseLong(txtCantidad.getText());
           
        ctp= cda-1;
        resultotal=(ctp*cda*1500);
